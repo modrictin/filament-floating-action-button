@@ -3,7 +3,7 @@
 namespace Modrictin\FilamentFab\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Modrictin\FilamentFab\FilamentFabServiceProvider;
+use Modrictin\FilamentFab\FloatingActionButtonServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            FilamentFabServiceProvider::class,
+            FloatingActionButtonServiceProvider::class,
         ];
     }
 
