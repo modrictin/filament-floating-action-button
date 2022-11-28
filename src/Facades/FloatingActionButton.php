@@ -13,5 +13,4 @@ class FloatingActionButton extends Facade
     {
         return \Modrictin\FilamentFab\FloatingActionButton::class;
     }
-
 }

@@ -14,7 +14,6 @@ class FloatingActionButton
     use CanBeHidden;
     use EvaluatesClosures;
 
-
     private FabType|null $typeComponent = null;
 
     public function __construct()
@@ -58,11 +57,11 @@ class FloatingActionButton
 
     private function injectFAB(): void
     {
-        if ($this->typeComponent && $this->isHidden() ) {
+        if ($this->typeComponent && $this->isHidden()) {
             return;
         }
 
-        Filament::registerRenderHook('body.end', fn(): string => Blade::render("@livewire('filament-fab.fab-component')"));
+        Filament::registerRenderHook('body.end', fn (): string => Blade::render("@livewire('filament-fab.fab-component')"));
     }
 
     public function getTypeComponent(): ?FabType
@@ -74,6 +73,4 @@ class FloatingActionButton
     {
         return $this->typeComponent->render();
     }
-
-
 }

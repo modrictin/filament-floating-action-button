@@ -11,11 +11,10 @@ class FabItem extends ViewComponent
     use HasIcon;
     use IsButton;
 
-
     protected string $view = 'filament-fab::types.fab-item';
 
-    public static function make(){
+    public static function make()
+    {
         return new self();
     }
-
 }

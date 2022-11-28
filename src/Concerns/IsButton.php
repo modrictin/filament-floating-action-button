@@ -18,6 +18,7 @@ trait IsButton
     public function setAction(Closure $action): self
     {
         $this->action = $action;
+
         return $this;
     }
 
@@ -25,5 +26,4 @@ trait IsButton
     {
         return $this->action;
     }
-
 }

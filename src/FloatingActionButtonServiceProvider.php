@@ -10,9 +10,8 @@ use Spatie\LaravelPackageTools\Package;
 class FloatingActionButtonServiceProvider extends PluginServiceProvider
 {
     protected array $styles = [
-        'filament-fab-stylesheet' => __DIR__ . '/../dist/filament-fab.css',
+        'filament-fab-stylesheet' => __DIR__.'/../dist/filament-fab.css',
     ];
-
 
     public function configurePackage(Package $package): void
     {
@@ -29,7 +28,7 @@ class FloatingActionButtonServiceProvider extends PluginServiceProvider
             ->hasCommand(FloatingActionButtonCommand::class);
     }
 
-    public function packageRegistered():void
+    public function packageRegistered(): void
     {
         parent::packageRegistered();
 
@@ -46,6 +45,4 @@ class FloatingActionButtonServiceProvider extends PluginServiceProvider
             \Modrictin\FilamentFab\Facades\FloatingActionButton::boot();
         });
     }
-
-
 }
